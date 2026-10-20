@@ -1,0 +1,75 @@
+/* WEEK06 portfolio: HTML + CSS only. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f7f3ea; color: #20344c; font-family: Arial, sans-serif; font-size: 1rem; line-height: 1.65; }
+a { color: inherit; text-underline-offset: .25em; }
+a:hover { color: #8f4129; }
+img { display: block; max-width: 100%; height: auto; }
+.container { width: 88%; max-width: 1120px; margin: 0 auto; }
+h1, h2, h3, p, figure { margin-top: 0; }
+h1, h2, h3 { line-height: 1.15; }
+h1 { font-size: 3.5rem; letter-spacing: -.04em; margin-bottom: 1.4rem; }
+h1 em { font-family: Georgia, serif; font-weight: normal; }
+h2 { font-size: 2.25rem; letter-spacing: -.025em; }
+h3 { font-size: 1.3rem; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid #cbc9c2; }
+.brand { font-size: 1.15rem; font-weight: bold; text-decoration: none; }
+.brand span { display: block; font-size: .75rem; font-weight: normal; letter-spacing: .08em; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+nav a { padding: .5rem 0; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.hero { display: flex; align-items: center; gap: 3rem; padding: 5rem 0; }
+.hero-copy { flex: 1.2; min-width: 0; }
+.hero-art { flex: 1; margin: 0; min-width: 0; }
+.hero-art img { border-radius: 50% 50% 8px 8px; }
+figcaption { margin-top: .75rem; text-align: center; font-size: .85rem; }
+.eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .13em; font-weight: bold; margin-bottom: 1rem; }
+.intro { max-width: 34rem; margin-bottom: 1.6rem; }
+.button { display: inline-block; padding: .8rem 1.2rem; background: #20344c; color: #fff; text-decoration: none; border-radius: 4px; transition: background-color .2s, transform .2s; }
+.button:hover { background: #8f4129; color: #fff; transform: translateY(-3px); }
+.button span { margin-left: 1rem; }
+.about-band { background: #e9e5db; padding: 3rem 0; }
+.about-layout, .skills-layout { display: flex; gap: 4rem; }
+.about-layout > div, .skills-layout > div { flex: 1; }
+.about-layout p:last-child { margin-bottom: 0; }
+.section { padding-top: 4rem; padding-bottom: 4rem; }
+.section-intro { margin-bottom: 2rem; }
+.projects { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; }
+.project { flex: 1 1 260px; min-width: 0; border: 1px solid #cbc9c2; border-radius: 8px; overflow: hidden; background: #fffdf8; }
+.project-body { padding: 1.4rem; }
+.status { font-size: .75rem; font-weight: bold; color: #754027; }
+summary { cursor: pointer; padding: .5rem 0; text-decoration: underline; text-underline-offset: .2em; }
+details p { font-size: .9rem; margin: .5rem 0 0; }
+.skills-band { background: #20344c; color: #f7f3ea; padding: 3.5rem 0; }
+.skill-list { flex: 1; list-style: none; padding: 0; margin: 0; }
+.skill-list li { padding: 1rem 0; border-bottom: 1px solid #687484; }
+.skill-list li:first-child { padding-top: 0; }
+.skill-list strong, .skill-list span { display: block; }
+.skill-list span { font-size: .9rem; color: #e1e4e9; }
+.email { font-size: 1.3rem; overflow-wrap: anywhere; }
+.site-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 1px solid #cbc9c2; padding: 1.5rem 0; font-size: .85rem; }
+.site-footer p { margin: 0; }
+:focus-visible { outline: 3px solid #a45132; outline-offset: 5px; }
+.skip-link { position: absolute; left: 1rem; top: -6rem; background: #fff; padding: .75rem; z-index: 2; }
+.skip-link:focus { top: 1rem; }
+@media (max-width: 900px) {
+  h1 { font-size: 2.7rem; }
+  .hero { gap: 2rem; padding: 3rem 0; }
+  .about-layout, .skills-layout { gap: 2rem; }
+}
+@media (max-width: 600px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  nav { gap: .5rem 1.25rem; }
+  .hero, .about-layout, .skills-layout { flex-direction: column; }
+  h1 { font-size: 2.35rem; }
+  h2 { font-size: 1.85rem; }
+  .hero-art { width: 100%; }
+  .project { flex-basis: 100%; }
+  .section { padding-top: 3rem; padding-bottom: 3rem; }
+  .skill-list { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+  .button:hover { transform: none; }
+}
